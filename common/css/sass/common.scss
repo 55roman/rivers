@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/* /////////////////////////////////////////////////////////////////////////// BaseSet */
+
+
+body {
+
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	background: #000;
+    color: #fff;
+
+}
+
+
+/* //////////////////////////////////////////////////////////// anchor */
+
+a{
+	color:#fff;
+}
+
+a:hover{
+	min-height: 1em;	/* Mac Firefox */
+	text-decoration: none;
+}
+
+
+/* //////////////////////////////////////////////////////////// fontsize */
+
+p, li, dt, dd, th, td {
+	line-height:1.75em;
+
+}
+p, h1, h2, h3, h4, li{
+	font-weight: normal;
+}
+p {
+	margin-bottom: 1em;
+}
+
+/* //////////////////////////////////////////////////////////// Base */
+
+
+img {
+	vertical-align:top;
+}
+ul li img,
+dl dt img,
+dl dd img{
+	vertical-align:bottom;
+}
+
+object {
+	vertical-align:top;
+}
+
+
+
+/* //////////////////////////////////////////////////////////// HHH */
+
+$mspan: 5;
+
+@for $i from 0 through 20 {
+
+	.mt#{$i*$mspan}{
+		margin-top:#{$mspan*$i}px !important;
+	}
+}
+
+@for $j from 0 through 20 {
+
+	.mb#{$j*$mspan}{
+		margin-bottom:#{$mspan*$j}px !important;
+	}
+}
+@for $k from 0 through 20 {
+
+	.mr#{$k*$mspan}{
+		margin-right:#{$mspan*$k}px !important;
+	}
+}
+@for $l from 0 through 20 {
+
+	.ml#{$l*$mspan}{
+		margin-left:#{$mspan*$l}px !important;
+	}
+}
+
+
+
+/* //////////////////////////////////////////////////////////// ClearFix */
+
+
+.fl{float:left;}
+.fr{float:right;}
+
+
+.clear{
+	clear:both;
+}
+
+/* modern browsers */
+
+.clearfix:after,
+.fBox:after,
+.container:after,
+div.inner:after,
+div#indexcontent:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* IE7 */
+
+.clearfix,
+.fBox,
+.container,
+div.inner,
+div#indexcontent {
+	display: inline-block;
+}
+
+/* legacy IE */
+
+* html .clearfix,
+* html .fBox,
+* html .container,
+* html div.inner,
+* html div#indexcontent {
+	height: 1%;
+}
+
+.clearfix,
+.fBox,
+.container,
+div.inner,
+div#indexcontent {
+	display: block;
+}
+

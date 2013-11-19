@@ -1,0 +1,177 @@
+$col_key: #fff;
+$content-w: 960px;
+$col_border: #dddddd;
+
+@mixin fl{float:left;}
+@mixin fr{float:right;}
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020";
+  }
+
+  &:after {
+
+    clear: both;
+  }
+}
+
+@mixin centering {
+	margin-left: auto;
+	margin-right: auto;
+}
+@mixin right {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+@mixin content {
+    width: $content-w;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin font-def {
+	font-size:13px;
+
+}
+@mixin font-m1 {
+  font-size:11px;
+
+}
+@mixin font-m2 {
+  font-size:9px;
+
+}
+@mixin font-m3 {
+  font-size:7px;
+
+}
+@mixin font-p1 {
+  font-size:15px;
+
+}
+@mixin font-p2 {
+  font-size:18px;
+
+}
+@mixin font-p3 {
+  font-size:22px;
+
+}
+
+@mixin font-min {
+	font-family: 'ヒラギノ明朝 Pro W3','Hiragino Mincho Pro','ＭＳ Ｐ明朝','MS PMincho',serif;
+	font-weight: normal;
+}
+/* Default ***************************************************************************/
+p {
+	@include font-def;
+}
+p,th,td,dt,dd {
+  letter-spacing: 0.1em;
+}
+h1 {}
+h2 {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+h3 {
+	margin-bottom: 30px;
+}
+section {
+	margin-bottom: 50px;
+}
+
+/* Utility ***************************************************************************/
+small {
+  font-size: 10pt;
+}
+
+.txt-c {
+	text-align: center !important;
+}
+.txt-r {
+	text-align: right !important;
+}
+
+.arrow1 {
+  background: url(../img/arrow1.png) no-repeat left center;
+  padding-left: 12px;
+}
+.font-def {
+	font-size:13px !important;
+
+}
+.font-p1 {
+  font-size:15px !important;
+}
+.font-p2 {
+  font-size:18px !important;
+
+}
+.font-p3 {
+  font-size:22px !important;
+}
+.font-m1 {
+  font-size:11px !important;
+}
+.font-m2 {
+  font-size:9px !important;
+
+}
+.font-m3 {
+  font-size:7px !important;
+}
+
+hr {
+	height: 1px;
+	background: $col_key;
+	border: none;
+	width: $content-w;
+}
+hr.strong {
+	height: 4px;
+}
+hr.bd10 {
+	margin: 10px auto;
+}
+hr.bd20 {
+	margin: 20px auto;
+}
+hr.bd30 {
+	margin: 30px auto;
+}
+
+/* Common Layout ***************************************************************************/
+
+
+#page-container {
+
+}
+
+#stage-container {
+	width: 640px;
+	height: 480px;
+	background: #333;
+}
+
+#anime01 {
+	position: absolute;
+
+	left: 87px;
+	top: 248px;
+	z-index: 1;
+	width: 280px;
+	height: 200px;
+	background: url(/img/anime.jpg) no-repeat;
+	background-position: 0 0;
+	display: none;
+
+}
