@@ -38,17 +38,16 @@ class Main
   addOneSprite: ()=>
     texture = new PIXI.Texture.fromImage("img/z00.jpg");
     spr = new PIXI.Sprite(texture);
-    spr.pivot.x = 200;
-    spr.pivot.y = 300;
+    spr.pivot.x = 100;
+    spr.pivot.y = 200;
     sprs.push(spr);
 
     container.addChild(spr);
 
-
   animate: ()=>
     objs[0].position.x += 2;
     spr = sprs[0];
-    spr.rotation += 1;
+    spr.rotation += 0.2;
     renderer.render(stage);
     setTimeout (=> requestAnimFrame(@animate)),20
     return null;
